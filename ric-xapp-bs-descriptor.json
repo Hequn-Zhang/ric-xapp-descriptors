@@ -1,0 +1,45 @@
+{
+    "xapp_name": "bs",
+    "version": "0.0.1",
+    "containers": [
+        {
+            "name": "bs",
+            "image": {
+                "registry": "docker.localhost:5000",
+                "name": "ric-xapp-bs",
+                "tag": "v0.0.1"
+            }
+        }
+    ],
+    "messaging": {
+        "ports": [
+            {
+                "name": "rmr-data",
+                "container": "bs",
+                "port": 4560,
+                "txMessages": [
+                ],
+                "rxMessages": [
+                ],
+                "policies": [],
+                "description": "rmr receive data port for bs"
+            },
+            {
+                "name": "rmr-route",
+                "container": "bs",
+                "port": 4561,
+                "description": "rmr route port for bs"
+            }
+        ]
+    },
+    "rmr": {
+        "protPort": "tcp:4560",
+        "maxSize": 2072,
+        "numWorkers": 1,
+        "rxMessages": [
+        ],
+        "txMessages": [
+        ],
+        "policies": []
+    }
+}

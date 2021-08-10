@@ -1,0 +1,45 @@
+{
+    "xapp_name": "kpm",
+    "version": "0.0.1",
+    "containers": [
+        {
+            "name": "kpm",
+            "image": {
+                "registry": "docker.localhost:5000",
+                "name": "ric-xapp-kpm",
+                "tag": "v0.0.1"
+            }
+        }
+    ],
+    "messaging": {
+        "ports": [
+            {
+                "name": "rmr-data",
+                "container": "kpm",
+                "port": 4560,
+                "txMessages": [
+                ],
+                "rxMessages": [
+                ],
+                "policies": [],
+                "description": "rmr receive data port for kpm"
+            },
+            {
+                "name": "rmr-route",
+                "container": "kpm",
+                "port": 4561,
+                "description": "rmr route port for kpm"
+            }
+        ]
+    },
+    "rmr": {
+        "protPort": "tcp:4560",
+        "maxSize": 2072,
+        "numWorkers": 1,
+        "rxMessages": [
+        ],
+        "txMessages": [
+        ],
+        "policies": []
+    }
+}
