@@ -33,7 +33,8 @@
             {
                 "name": "debug",
                 "container": "bs",
-                "protPort": "udp:9000",
+                "protocol": "UDP",
+                "port": 9000,
                 "description": "debug port for bs"
             }
         ]
