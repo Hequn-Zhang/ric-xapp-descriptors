@@ -14,39 +14,11 @@
     "messaging": {
         "ports": [
             {
-                "name": "rmr-data",
-                "container": "bs",
-                "port": 4560,
-                "txMessages": [
-                ],
-                "rxMessages": [
-                ],
-                "policies": [],
-                "description": "rmr receive data port for bs"
-            },
-            {
-                "name": "rmr-route",
-                "container": "bs",
-                "port": 4561,
-                "description": "rmr route port for bs"
-            },
-            {
                 "name": "debug",
                 "container": "bs",
-                "protocol": "UDP",
                 "port": 9000,
                 "description": "debug port for bs"
             }
         ]
-    },
-    "rmr": {
-        "protPort": "tcp:4560",
-        "maxSize": 2072,
-        "numWorkers": 1,
-        "rxMessages": [
-        ],
-        "txMessages": [
-        ],
-        "policies": []
     }
 }
