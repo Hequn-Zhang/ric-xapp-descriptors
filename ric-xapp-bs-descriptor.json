@@ -33,7 +33,7 @@
             {
                 "name": "debug",
                 "container": "bs",
-                "port": 9000,
+                "protPort": "udp:9000",
                 "description": "debug port for bs"
             }
         ]
@@ -41,16 +41,6 @@
     "rmr": {
         "protPort": "tcp:4560",
         "maxSize": 2072,
-        "numWorkers": 1,
-        "rxMessages": [
-        ],
-        "txMessages": [
-        ],
-        "policies": []
-    },
-    "debug": {
-        "protPort": "udp:9000",
-        "maxSize": 1500,
         "numWorkers": 1,
         "rxMessages": [
         ],
