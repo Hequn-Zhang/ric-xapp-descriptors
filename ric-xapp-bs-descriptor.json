@@ -47,5 +47,15 @@
         "txMessages": [
         ],
         "policies": []
+    },
+    "debug": {
+        "protPort": "udp:9000",
+        "maxSize": 1500,
+        "numWorkers": 1,
+        "rxMessages": [
+        ],
+        "txMessages": [
+        ],
+        "policies": []
     }
 }
