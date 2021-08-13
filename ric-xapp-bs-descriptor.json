@@ -29,6 +29,12 @@
                 "container": "bs",
                 "port": 4561,
                 "description": "rmr route port for bs"
+            },
+            {
+                "name": "debug",
+                "container": "bs",
+                "port": 9000,
+                "description": "debug port for bs"
             }
         ]
     },
